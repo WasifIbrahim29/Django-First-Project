@@ -14,4 +14,4 @@ def home(request):
 
 def help(request):
     help_dict= {'help_insert': 'Hello, this is the Help page.'}
-    return render(request,'polls/help.html',context=help_dict)
+    return render(request,'first_app/help.html',context=help_dict)
