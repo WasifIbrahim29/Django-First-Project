@@ -12,6 +12,6 @@ def challenge(request):
 def home(request):
     return HttpResponse("<em>Hello world, you're at home route.</em>")
 
-def help(request):
-    help_dict= {'help_insert': 'Hello, this is the Help page.'}
-    return render(request,'first_app/help.html',context=help_dict)
+def dashboard(request):
+    dashboard_dict= {'dashboard_insert': 'Hello, this is the Dashboard page.'}
+    return render(request,'first_app/help.html',context=dashboard_dict)
