@@ -11,3 +11,7 @@ def challenge(request):
 
 def home(request):
     return HttpResponse("<em>Hello world, you're at home route.</em>")
+
+def help(request):
+    help_dict= {'help_insert': 'Hello, this is the Help page.'}
+    return render(request,'polls/help.html',context=help_dict)
