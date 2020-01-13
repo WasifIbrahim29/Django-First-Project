@@ -15,6 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR= os.path.join(BASE_DIR,'templates') 
+STATIC_DIR= os.path.join(BASE_DIR,"static")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -26,7 +27,7 @@ SECRET_KEY = 'r3z#3z^os06p1p57*fqbj68+pdhk^$)rh$0pdslhk&wl0_qng='
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
-X_FRAME_OPTIONS = "allow-from https://educative.io"
+_FRAME_OPTIONS = "allow-from https://educative.io"
 
 
 # Application definition
@@ -120,3 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS= [
+   STATIC_DIR,
+]

@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello World!")
+    return render(request,'first_app/index.html')
 
 def challenge(request):
     return HttpResponse("<h2>My First Challenge<h2>")
@@ -14,4 +14,4 @@ def home(request):
 
 def dashboard(request):
     dashboard_dict= {'dashboard_insert': 'Hello, this is the Dashboard page.'}
-    return render(request,'first_app/help.html',context=dashboard_dict)
+    return render(request,'first_app/dashboard.html',context=dashboard_dict)
